@@ -1,8 +1,8 @@
 int L_EN_FOR_ONE=3;
 int R_EN_FOR_ONE=4;
 int L_PWM_FOR_ONE=5;
-
 int R_PWM_FOR_ONE=6;
+
 int L_EN_FOR_TWO=8;
 int R_EN_FOR_TWO=9;
 int L_PWM_FOR_TWO=10;
