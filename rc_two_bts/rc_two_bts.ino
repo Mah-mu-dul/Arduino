@@ -21,7 +21,7 @@ void forward_right();
 void back_left();
 void back_right();
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(38400);
 pinMode(L_EN_FOR_ONE,OUTPUT);
 pinMode(R_EN_FOR_ONE,OUTPUT);
 pinMode(L_PWM_FOR_ONE,OUTPUT);

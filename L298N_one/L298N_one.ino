@@ -29,7 +29,7 @@ void servo_left_off();
 void servo_right_off();
 void servo_right_on();
 void setup() {
-  Serial.begin(38400);
+  Serial.begin(9600);
   // put your setup code here, to run once:
   pinMode(IN1_L, OUTPUT);
   pinMode(IN2_L, OUTPUT);
@@ -356,3 +356,4 @@ void servo_right_on(){
      myservo.write(pos_2); 
 
   };
+  
