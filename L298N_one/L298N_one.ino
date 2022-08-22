@@ -169,34 +169,51 @@ void loop() {
         incomingByte = '*';
       }
       break;
-    case 'G':
-      {
-        forward_left();
-        Serial.println("Backward Right\n");
-        incomingByte = '*';
-      }
-      break;
-    case 'H':
-      {
-        back_left();
-        Serial.println("Backward Left \n");
-        incomingByte = '*';
-      }
-      break;
-    case 'I':
+
+
+
+case 'I':
       {
        forward_right();
         Serial.println("Forward Right \n");
         incomingByte = '*';
       }
       break;
+
+
+      
+      
     case 'J':
+      {
+        forward_left();
+        Serial.println("Backward Right\n");
+        incomingByte = '*';
+      }
+      break;
+      
+    case 'G':
+      {
+        back_left();
+        Serial.println("Backward Left \n");
+        incomingByte = '*';
+      }
+      break;
+    
+    case 'H':
       {
         back_right();
         Serial.println("Forward Left\n");
         incomingByte = '*';
       }
       break;
+
+
+
+
+
+
+
+      
       case 'w':
       {
         servo_right_on();
