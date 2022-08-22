@@ -179,8 +179,6 @@ case 'I':
         incomingByte = '*';
       }
       break;
-
-
       
       
     case 'J':
