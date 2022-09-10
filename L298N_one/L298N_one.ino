@@ -74,7 +74,7 @@ void loop() {
       }
       break;
 
-    case 'L':
+    case 'R':
       // turn right
       {
         forward();
@@ -82,7 +82,7 @@ void loop() {
         incomingByte = '*';
       }
       break;
-    case 'R':
+    case 'L':
       {
         backward();
         Serial.println("Rotate Left\n");
@@ -172,7 +172,7 @@ void loop() {
 
 
 
-case 'I':
+case 'G':
       {
        forward_right();
         Serial.println("Forward Right \n");
@@ -181,7 +181,7 @@ case 'I':
       break;
       
       
-    case 'J':
+    case 'H':
       {
         forward_left();
         Serial.println("Backward Right\n");
@@ -189,7 +189,7 @@ case 'I':
       }
       break;
       
-    case 'G':
+    case 'I':
       {
         back_left();
         Serial.println("Backward Left \n");
@@ -197,7 +197,7 @@ case 'I':
       }
       break;
     
-    case 'H':
+    case 'J':
       {
         back_right();
         Serial.println("Forward Left\n");
