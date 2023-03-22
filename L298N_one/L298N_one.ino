@@ -57,7 +57,7 @@ void loop() {
       }
       break;
 
-    case 'F':
+    case 'B':
 
       { left();
 
@@ -66,7 +66,7 @@ void loop() {
       }
       break;
 
-    case 'B':
+    case 'F':
 
       { right();
         // Serial.println("forward\n");
@@ -172,7 +172,7 @@ void loop() {
 
 
 
-case 'G':
+case 'J':
       {
        forward_right();
         Serial.println("Forward Right \n");
@@ -181,7 +181,7 @@ case 'G':
       break;
       
       
-    case 'H':
+    case 'I':
       {
         forward_left();
         Serial.println("Backward Right\n");
@@ -189,7 +189,7 @@ case 'G':
       }
       break;
       
-    case 'I':
+    case 'H':
       {
         back_left();
         Serial.println("Backward Left \n");
@@ -197,7 +197,7 @@ case 'G':
       }
       break;
     
-    case 'J':
+    case 'G':
       {
         back_right();
         Serial.println("Forward Left\n");
@@ -248,13 +248,13 @@ case 'G':
 }
 void right() {
   //left
-  analogWrite(IN1_L, speed_left);
+  analogWrite(IN1_L, speed_right);
 
   analogWrite(IN2_L, 0);
 
   analogWrite(IN3_L, 0);
 
-  analogWrite(IN4_L, speed_left);
+  analogWrite(IN4_L, speed_right);
 
 
 };
@@ -318,11 +318,11 @@ void back_left() {
 };
 void forward() {
   //left
-  analogWrite(IN1_L, speed_left);
+  analogWrite(IN1_L, 200);
 
   analogWrite(IN2_L, 0);
 
-  analogWrite(IN3_L, speed_left);
+  analogWrite(IN3_L, 200);
 
   analogWrite(IN4_L, 0);
 

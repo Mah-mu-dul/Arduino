@@ -5,8 +5,9 @@ int R_PWM_FOR_ONE=6;
 
 int L_EN_FOR_TWO=8;
 int R_EN_FOR_TWO=9;
-int L_PWM_FOR_TWO=10;
-int R_PWM_FOR_TWO=11;
+int L_PWM_FOR_TWO=12;
+int R_PWM_FOR_TWO=13;
+
 char incomingByte; // for incoming serial data
 int speed_min = 155; //the minimum "speed" the motors will turn - take it lower and motors don't turn
 int speed_max = 255; //
@@ -23,7 +24,7 @@ void forward_right();
 void back_left();
 void back_right();
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(38400);
 pinMode(L_EN_FOR_ONE,OUTPUT);
 pinMode(R_EN_FOR_ONE,OUTPUT);
 pinMode(L_PWM_FOR_ONE,OUTPUT);
@@ -53,7 +54,7 @@ if (Serial.available() > 0) {
        incomingByte='*';}
      break;
      
-     case 'F':
+     case 'L':
       
      {  left();
        
@@ -61,21 +62,21 @@ if (Serial.available() > 0) {
        incomingByte='*';}
      break;
     
-      case 'B':
+      case 'R':
        
     {   right();
       // Serial.println("Backward\n");
        incomingByte='*';}
      break;
      
-     case 'L':
+     case 'F':
      // turn right
      {  
        forward(); 
       // Serial.println("Rotate Right\n");
        incomingByte='*';}
      break;
-       case 'R':
+       case 'B':
       { 
        backward();     
        //Serial.println("Rotate Left\n");

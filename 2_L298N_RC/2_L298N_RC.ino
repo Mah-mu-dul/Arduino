@@ -30,7 +30,7 @@ void forward_right();
 void back_left();
 void back_right();
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   // put your setup code here, to run once:
 pinMode(ENA_L,OUTPUT);
 pinMode(IN1_L,OUTPUT);
@@ -351,6 +351,4 @@ void stopy(){
   digitalWrite(IN3_R,LOW);
   digitalWrite(IN4_R,LOW);
   analogWrite(ENB_R,0);
-
-  
   };

@@ -1,34 +1,51 @@
-int trigpin = 9;
-int echopin = 11;
-int switchT = 7;
+int trigpinL = A3;
 
-int counter;
-float avarage;
-float distance ;
-float duration;
+int trigpinL = A5;
+
+int trigpinL = A5;
+
+int echopinL = A3;
+int echopinF = A1;
+int echopinR = A2;
+
+
+float distanceL ;
+float distanceF ;
+float distanceR ;
 
 void setup() {
   pinMode(trigpin, OUTPUT);
-  pinMode(echopin, INPUT);
-  pinMode(switchT, INPUT);
-  pinMode(10, OUTPUT);
+  pinMode(trigpin, OUTPUT);
+  pinMode(trigpin, OUTPUT);
+
+  pinMode(echopinL, INPUT);
+  pinMode(echopinF, INPUT);
+  pinMode(echopinR, INPUT);
+  
+  
   Serial.begin(9600);
 
 }
 
 void loop()
 {
-  if (digitalRead(switchT) == HIGH) {
-    delay(200);
-    digitalWrite(trigpin, LOW);
-  
-
     digitalWrite(trigpin, HIGH);
-    delayMicroseconds(2);
+    delay(100);
+    digitalWrite(trigpin, HIGH);
+    delay(100);
+    digitalWrite(trigpin, HIGH);
+
+    
     digitalWrite(trigpin, LOW);
-    duration = pulseIn(echopin, HIGH);
-    distance = (duration * 0.034) / 2;
-    Serial.println(floor(distance));
-  }
+    
+    distanceL = pulseIn(echopinL, HIGH);
+    distanceF = pulseIn(echopinF, HIGH);
+    distanceR = pulseIn(echopinR, HIGH);
+//* 0.034) / 2;
+
+    
+    Serial.println(floor(distanceL));
+    Serial.println(floor(distanceF));
+    Serial.println(floor(distanceR));
 
 }
