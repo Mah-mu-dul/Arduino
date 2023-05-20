@@ -1,3 +1,4 @@
+
 #include <Servo.h>
 
 Servo myservo; 
@@ -57,7 +58,7 @@ void loop() {
       }
       break;
 
-    case 'B':
+    case 'F':
 
       { left();
 
@@ -66,7 +67,7 @@ void loop() {
       }
       break;
 
-    case 'F':
+    case 'B':
 
       { right();
         // Serial.println("forward\n");
@@ -172,7 +173,7 @@ void loop() {
 
 
 
-case 'J':
+case 'G':
       {
        forward_right();
         Serial.println("Forward Right \n");
@@ -181,7 +182,7 @@ case 'J':
       break;
       
       
-    case 'I':
+    case 'H':
       {
         forward_left();
         Serial.println("Backward Right\n");
@@ -189,7 +190,7 @@ case 'J':
       }
       break;
       
-    case 'H':
+    case 'I':
       {
         back_left();
         Serial.println("Backward Left \n");
@@ -197,7 +198,7 @@ case 'J':
       }
       break;
     
-    case 'G':
+    case 'J':
       {
         back_right();
         Serial.println("Forward Left\n");
@@ -248,13 +249,13 @@ case 'J':
 }
 void right() {
   //left
-  analogWrite(IN1_L, speed_right);
+  analogWrite(IN1_L, speed_left);
 
   analogWrite(IN2_L, 0);
 
   analogWrite(IN3_L, 0);
 
-  analogWrite(IN4_L, speed_right);
+  analogWrite(IN4_L, speed_left);
 
 
 };
@@ -292,7 +293,6 @@ void forward_right() {
 
 };
 void back_right() {
-  //left
   analogWrite(IN1_L, 0);
 
   analogWrite(IN2_L, 0);
@@ -317,12 +317,11 @@ void back_left() {
 
 };
 void forward() {
-  //left
-  analogWrite(IN1_L, 200);
+  analogWrite(IN1_L, speed_left);
 
   analogWrite(IN2_L, 0);
 
-  analogWrite(IN3_L, 200);
+  analogWrite(IN3_L, speed_left);
 
   analogWrite(IN4_L, 0);
 

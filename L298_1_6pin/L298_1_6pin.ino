@@ -61,14 +61,14 @@ if (Serial.available() > 0) {
        incomingByte='*';}
      break;
      
-     case 'R':
+     case 'L':
      // turn right
      {  
        right(); 
       // Serial.println("Rotate Right\n");
        incomingByte='*';}
      break;
-       case 'L':
+       case 'R':
       { 
        left();     
        //Serial.println("Rotate Left\n");
@@ -144,25 +144,25 @@ if (Serial.available() > 0) {
        Serial.println("Speed full \n");
        incomingByte='*';}
      break; 
-        case 'J':
+        case 'H':
       { 
        back_right();
        Serial.println("Speed full \n");
        incomingByte='*';}
      break;
-      case 'H':
+      case 'J':
       { 
        back_left();
        Serial.println("Speed full \n");
        incomingByte='*';}
      break;
-      case 'I':
+      case 'G':
       { 
        forward_right();
        Serial.println("Speed full \n");
        incomingByte='*';}
      break;
-      case 'G':
+      case 'I':
       { 
       forward_left();
        Serial.println("Speed full \n");

@@ -1,18 +1,18 @@
-int ENA_L =2;
-int IN1_L =3;
+int ENA_L =5;
+int IN1_L =7;
 int IN2_L =4; 
-int IN3_L =5; 
-int IN4_L =6;
-int ENB_L =7;
+int IN3_L =3; 
+int IN4_L =2;
+int ENB_L =6;
 
 
 //RIGHT
-int ENA_R= 8;
-int IN1_R =9;
-int IN2_R =10; 
-int IN3_R =11; 
-int IN4_R =12;
-int ENB_R =13;
+int ENA_R= 11;
+int IN1_R =13;
+int IN2_R =12; 
+int IN3_R =9; 
+int IN4_R =8;
+int ENB_R =10;
 
 char incomingByte=0; // for incoming serial data
 int speed_min = 135; //the minimum "speed" the motors will turn - take it lower and motors don't turn
@@ -62,7 +62,7 @@ if (Serial.available() > 0) {
        incomingByte='*';}
      break;
      
-     case 'L':
+     case 'F':
       
      {  left();
        
@@ -70,21 +70,21 @@ if (Serial.available() > 0) {
        incomingByte='*';}
      break;
     
-      case 'R':
+      case 'B':
        
     {   right();
       // Serial.println("Backward\n");
        incomingByte='*';}
      break;
      
-     case 'F':
+     case 'L':
      // turn right
      {  
        forward(); 
       // Serial.println("Rotate Right\n");
        incomingByte='*';}
      break;
-       case 'B':
+       case 'R':
       { 
        backward();     
        //Serial.println("Rotate Left\n");
@@ -160,7 +160,7 @@ if (Serial.available() > 0) {
        Serial.println("Speed full \n");
        incomingByte='*';}
      break; 
-        case 'J':
+        case 'I':
       { 
        back_right();
        Serial.println("Speed full \n");
@@ -172,7 +172,7 @@ if (Serial.available() > 0) {
        Serial.println("Speed full \n");
        incomingByte='*';}
      break;
-      case 'I':
+      case 'J':
       { 
        forward_right();
        Serial.println("Speed full \n");
